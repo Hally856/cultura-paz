@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cultura de Paz y Ciudadanía</title>
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/3/31/Peace_dove.jpg" type="image/png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(120deg, #fbc2eb, #a6c1ee);
+      color: #333;
+      padding: 30px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 3em;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+      animation: fadeInDown 1.5s ease;
+    }
+    p.description {
+      font-size: 1.3em;
+      color: white;
+      margin: 10px 0 30px;
+      animation: fadeInDown 1.8s ease;
+    }
+    .music-control {
+      margin-bottom: 20px;
+    }
+    .music-control button {
+      background-color: #ff6f61;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.3s ease;
+    }
+    .music-control button:hover {
+      background-color: #e63946;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+      animation: fadeIn 2s ease;
+    }
+    .poster {
+      background: rgba(255, 255, 255, 0.96);
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      padding: 20px;
+      text-align: left;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .poster img {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 15px;
+    }
+    .poster h2 {
+      color: #6a0572;
+      font-size: 1.7em;
+    }
+    .poster p {
+      font-size: 0.95em;
+      color: #444;
+      margin: 10px 0;
+      line-height: 1.4;
+    }
+    .poster a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #1d3557;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    .poster a:hover {
+      color: #e63946;
+    }
+    .poster:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 768px) {
+      body {
+        padding: 15px;
+      }
+      .music-control button {
+        padding: 12px 25px;
+        font-size: 1.1em;
+      }
+      h1 {
+        font-size: 2.2em;
+      }
+      p.description {
+        font-size: 1.1em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h1>Cultura de Paz y Ciudadanía</h1>
+<p class="description">¡Conoce los valores que fortalecen una sociedad justa, empática y pacífica!</p>
+
+<div class="music-control">
+  <audio id="backgroundMusic" loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mp3">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+  <button onclick="toggleMusic()">Reproducir Música</button>
+</div>
+
+<div class="grid">
+  <div class="poster">
+    <a href="https://es.wikipedia.org/wiki/Derechos_humanos" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Universal_Declaration_of_Human_Rights_Spanish.svg" alt="Derechos Humanos">
+    </a>
+    <h2>Derechos Humanos</h2>
+    <p>Los derechos humanos son normas fundamentales que protegen la dignidad y la libertad de cada persona, sin importar raza, sexo o nacionalidad. Incluyen derechos a la vida, la educación, la salud, la libertad de expresión y la protección ante la discriminación y abusos.</p>
+    <p>Promueven la igualdad, la paz y la justicia social en todos los países y son defendidos por la ONU y organizaciones humanitarias.</p>
+    <a href="https://es.wikipedia.org/wiki/Derechos_humanos" target="_blank">Leer más sobre Derechos Humanos</a>
+  </div>
+
+  <div class="poster">
+    <a href="https://es.wikipedia.org/wiki/Civismo" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Civic_participation.jpg" alt="Civismo">
+    </a>
+    <h2>Civismo</h2>
+    <p>El civismo es el conjunto de conductas y actitudes que garantizan una convivencia respetuosa y ordenada. Fomentar el civismo significa respetar las leyes, cuidar los espacios públicos, apoyar al prójimo y actuar con responsabilidad social.</p>
+    <p>Una sociedad cívica es aquella que prioriza el diálogo, la solidaridad y el respeto a los derechos colectivos para construir bienestar y armonía.</p>
+    <a href="https://es.wikipedia.org/wiki/Civismo" target="_blank">Leer más sobre Civismo</a>
+  </div>
+
+  <div class="poster">
+    <a href="https://es.wikipedia.org/wiki/Democracia" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Democracy.jpg" alt="Democracia">
+    </a>
+    <h2>Democracia</h2>
+    <p>La democracia es un sistema político que garantiza la participación libre de las personas en las decisiones públicas, ya sea votando o expresando sus ideas. Su esencia es la igualdad, la justicia y el respeto a los derechos de todos.</p>
+    <p>Fortalece la convivencia pacífica, la tolerancia, la rendición de cuentas y el derecho a ser escuchados en las decisiones que afectan la sociedad.</p>
+    <a href="https://es.wikipedia.org/wiki/Democracia" target="_blank">Leer más sobre Democracia</a>
+  </div>
+
+  <div class="poster">
+    <a href="https://es.wikipedia.org/wiki/Cultura_de_la_paz" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Peace_dove.jpg" alt="Cultura de Paz">
+    </a>
+    <h2>Cultura de Paz</h2>
+    <p>La cultura de paz enseña a resolver conflictos sin violencia, usando el diálogo y la empatía. Impulsa el respeto a las diferencias, la cooperación, la solidaridad y la defensa de los derechos humanos como camino hacia sociedades pacíficas y justas.</p>
+    <p>Construir cultura de paz es apostar por la tolerancia, la educación y la justicia social para prevenir la violencia y crear bienestar común.</p>
+    <a href="https://es.wikipedia.org/wiki/Cultura_de_la_paz" target="_blank">Leer más sobre Cultura de Paz</a>
+  </div>
+</div>
+
+<script>
+  const music = document.getElementById('backgroundMusic');
+  const button = document.querySelector('.music-control button');
+  function toggleMusic() {
+    if (music.paused) {
+      music.play();
+      button.textContent = "Pausar Música";
+    } else {
+      music.pause();
+      button.textContent = "Reproducir Música";
+    }
+  }
+</script>
+
+</body>
+</html>
